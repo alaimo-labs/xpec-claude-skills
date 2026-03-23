@@ -1,0 +1,19 @@
+{
+  "name": "xpec-claude-skills",
+  "owner": {
+    "name": "Xpec"
+  },
+  "plugins": [
+    {
+      "name": "xpec",
+      "source": "./",
+      "description": "Skills for working with Xpec.ai product specifications. Discover, read, and manage specs using MCP tools.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Xpec"
+      },
+      "keywords": ["xpec", "specifications", "product-management", "mcp"],
+      "license": "MIT"
+    }
+  ]
+}

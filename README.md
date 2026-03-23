@@ -26,7 +26,7 @@ All skills follow the [Agent Skills](https://agentskills.io) open standard and w
 ### 1. Install the plugin
 
 ```bash
-claude /plugin install https://github.com/xpec-ai/xpec-claude-skills
+claude /plugin install https://github.com/alaimo-labs/xpec-claude-skills
 ```
 
 ### 2. Connect your project to Xpec
