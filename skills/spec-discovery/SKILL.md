@@ -11,15 +11,15 @@ Guide the agent through discovering available specifications in an Xpec workspac
 
 ## Tools Available
 
-- `listSpecifications` — List specs with optional filters (`status`, `projectId`, `limit`). Returns metadata and available section slugs, but no content.
+- `listSpecifications` — List specs with optional filters (`purpose`, `projectId`, `limit`). Returns metadata and available section slugs, but no content.
 - `getSpecificationSections` — Retrieve specific sections by slug. Use this for targeted reading.
-- `getFullSpecification` — Retrieve the entire spec. Avoid unless you truly need everything.
+- `getFullSpecification` — Retrieve the entire spec (`includeContext` optionally adds product/project context). Avoid unless you truly need everything.
 
 ## Instructions
 
 1. **Start with `listSpecifications`** to see what's available. Use filters when possible:
-   - `status: "READY"` — specs ready to be worked on
-   - `status: "IN_PROGRESS"` — specs currently being implemented
+   - `purpose: "implement"` (default) — specs ready to be worked on or already in progress (READY + IN_PROGRESS)
+   - `purpose: "review"` — specs available for review (DRAFT, REFINING, READY, IN_PROGRESS)
    - `projectId` — narrow to a specific project
 
 2. **Note the section slugs** returned for each spec. These tell you what content is available (e.g., `overview`, `user-stories`, `wireframes`, `acceptance-criteria`).

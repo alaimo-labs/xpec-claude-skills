@@ -7,7 +7,7 @@ argument-hint: [spec-name-or-id]
 
 You are about to implement a specification from Xpec. Follow these steps:
 
-1. **Find the spec:** Use `listSpecifications` to find the spec matching "$ARGUMENTS". If no argument was given, list specs with `status: "READY"` or `IN_PROGRESS` and ask the user which one to work on.
+1. **Find the spec:** Use `listSpecifications` to find the spec matching "$ARGUMENTS". If no argument was given, list specs with `purpose: "implement"` and ask the user which one to work on.
 
 2. **Read key sections:** Once you have the spec ID, use `getSpecificationSections` to read `overview`, `user-stories`, and `success-criteria`. These are the minimum you need to start. If any of these sections are not present, pick the closest in meaning.
 

@@ -32,7 +32,13 @@ Inside a Claude Code session, first add the marketplace, then install the plugin
 /plugin install xpec@xpec-claude-skills
 ```
 
-### 2. Connect your project to Xpec
+### 2. Update the plugin
+
+```
+/plugin update xpec@xpec-claude-skills
+```
+
+### 3. Connect your project to Xpec
 
 Each project connects to its own Xpec product. Add a `.claude/.mcp.json` file to your project root:
 

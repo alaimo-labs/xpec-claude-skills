@@ -8,7 +8,7 @@
       "name": "xpec",
       "source": "./",
       "description": "Skills for working with Xpec.ai product specifications. Discover, read, and manage specs using MCP tools.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Xpec"
       },

@@ -7,7 +7,7 @@ argument-hint: [spec-name-or-id]
 
 You are reviewing a specification from Xpec for quality and completeness. Follow these steps:
 
-1. **Find the spec:** Use `listSpecifications` to find the spec matching "$ARGUMENTS". If no argument was given, ask the user which spec to review.
+1. **Find the spec:** Use `listSpecifications` with `purpose: "review"` to find the spec matching "$ARGUMENTS". If no argument was given, list specs with `purpose: "review"` and ask the user which spec to review.
 
 2. **Read all sections:** Use `getFullSpecification` with `includeContext: true` to get the complete picture. A review requires the full content.
 
@@ -23,4 +23,4 @@ You are reviewing a specification from Xpec for quality and completeness. Follow
    - What's missing
    - Suggested improvements
 
-5. **Record the review:** Use `addSpecNotes` to append your review findings so the team has a record.
+5. **Submit the review:** Use `addSpecReview` to submit your review findings as markdown. This saves the review to the spec for the team.
