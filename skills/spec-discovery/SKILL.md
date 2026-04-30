@@ -14,6 +14,7 @@ Guide the agent through discovering available specifications in an Xpec workspac
 - `listSpecifications` — List specs with optional filters (`purpose`, `projectId`, `limit`). Returns metadata and available section slugs, but no content.
 - `getSpecificationSections` — Retrieve specific sections by slug. Use this for targeted reading.
 - `getFullSpecification` — Retrieve the entire spec (`includeContext` optionally adds product/project context). Avoid unless you truly need everything.
+- `getSpecProgress` — Retrieve the iteration log and current status for a spec. Call this before reading sections when `recordedIterations > 0`.
 
 ## Instructions
 
@@ -26,7 +27,9 @@ Guide the agent through discovering available specifications in an Xpec workspac
 
 3. **Read only what you need** using `getSpecificationSections` with specific slugs. Do not fetch the full spec unless the user explicitly asks for it or the task requires all sections.
 
-4. **Present findings clearly** — show the user spec titles, statuses, and available sections so they can decide what to explore further.
+4. **Check `recordedIterations`** in each list entry. If `> 0`, the spec has prior agent work — call `getSpecProgress` to recover that context before reading sections.
+
+5. **Present findings clearly** — show the user spec titles, statuses, and available sections so they can decide what to explore further.
 
 ## Key Principle
 

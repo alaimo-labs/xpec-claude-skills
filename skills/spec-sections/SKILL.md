@@ -14,6 +14,7 @@ Guide the agent through reading and interpreting spec content effectively, fetch
 Specifications are divided into sections identified by slugs. Common slugs include:
 
 - `overview` — High-level description of the feature or product
+- `exposure-plan` — The strategic exposure plan (level structure, beliefs, validation criteria). Virtual section: present in the spec's section metadata only when `Specification.exposurePlan` is non-null.
 - `user-stories` — User stories, typically without acceptance criteria
 - `user-journey` - User journey for the specification
 - `business-rules` - Rules that the software/product should follow
@@ -31,6 +32,7 @@ The actual available slugs vary per spec. Always check what's available via `lis
 1. **Match sections to the task:**
    - Implementing a feature? Start with `overview` + `user-stories` + `success-criteria`
    - Designing UI? Start with `wireframes` + `overview` + `visual-interaction-notes` + `empty-state`
+   - Implementing a feature with progressive disclosure? Also fetch `exposure-plan` for the level structure and beliefs.
 
 2. **Use `getSpecificationSections`** with the spec ID and an array of relevant slugs.
 
